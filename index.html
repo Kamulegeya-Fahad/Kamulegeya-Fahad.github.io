@@ -1,354 +1,407 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 	<meta name="generator" content="Hugo 0.88.1" />
-  <meta charset="utf-8" />
-  <title>PHAD</title>
 
-  <!-- mobile responsive meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 
-  <!-- Slick Carousel -->
-  <link rel="stylesheet" href="https://kamulegeya-fahad.github.io/plugins/slick/slick.css" />
-  <link rel="stylesheet" href="https://kamulegeya-fahad.github.io/plugins/slick/slick-theme.css" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://kamulegeya-fahad.github.io/plugins/font-awesome/css/font-awesome.min.css" />
+<script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=GTM-000000' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-000000');
+</script>
 
-  <!-- Magnific Popup -->
-  <link rel="stylesheet" href="https://kamulegeya-fahad.github.io/plugins/magnafic-popup/magnific-popup.css" />
 
-  <!-- Stylesheets -->
-  
-  <link href="https://kamulegeya-fahad.github.io/scss/style.min.css" rel="stylesheet" />
+<title></title>
+<style>
+     
+    .rad-fade-in {
+        will-change: opacity, transform;
+        animation-name: rad-fade-in-fallback;
+        animation-duration: 5s;
+        animation-fill-mode: both;
+    }
 
-  <!--Favicon-->
-  <link rel="shortcut icon" href="https://kamulegeya-fahad.github.io/images/favicon.ico" type="image/x-icon" />
-  <link rel="icon" href="https://kamulegeya-fahad.github.io/images/favicon.png" type="image/x-icon" />
-  
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR%20GOOGLE%20ANALYTICS%20CODE"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    @keyframes rad-fade-in-fallback {
+        0% {
+            opacity: 0;
+        }
 
-    gtag('config', 'YOUR GOOGLE ANALYTICS CODE');
-  </script>
-  
-</head>
+        75% {
+            opacity: 0;
+        }
 
-<body>
-  <nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container">
-    <a href="https://kamulegeya-fahad.github.io/" class="navbar-brand">
-      <img src="https://kamulegeya-fahad.github.io/images/site-navigation/logo.png" alt="site-logo">
-    </a>
-    <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarCollapse">
-      <span class="navbar-toggler-icon"></span>
-      <span class="navbar-toggler-icon"></span>
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        100% {
+            opacity: 1;
+        }
+    }
 
-    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-      <ul class="nav navbar-nav main-navigation my-0 mx-auto">
-        
-        
-        <li class="nav-item">
-          <a href="https://kamulegeya-fahad.github.io/#home"
-            class="nav-link text-dark text-sm-center p-2 scroll">Home</a>
-        </li>
-        
-        <li class="nav-item">
-          <a href="https://kamulegeya-fahad.github.io/#about"
-            class="nav-link text-dark text-sm-center p-2 scroll">About</a>
-        </li>
-        
-        <li class="nav-item">
-          <a href="https://kamulegeya-fahad.github.io/#resume"
-            class="nav-link text-dark text-sm-center p-2 scroll">Resume</a>
-        </li>
-        
-        <li class="nav-item">
-          <a href="https://kamulegeya-fahad.github.io/#contact"
-            class="nav-link text-dark text-sm-center p-2 scroll">Contact</a>
-        </li>
-        
-      </ul>
-      <div class="navbar-nav">
-        <a href="https://kamulegeya-fahad.github.io/contact" class="btn btn-primary btn-zoom hire_button">Hire Me Now</a>
-      </div>
-    </div>
-  </div>
-</nav>
-  <div id="content">
+    .fonts-loaded .rad-fade-in.rad-waiting {
+        animation-name: none;
+        opacity: 0;
+    }
+
+    .fonts-loaded .rad-fade-in.rad-animate {
+        animation-name: rad-fade-in;
+        animation-duration: 1.1s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+     
+    .rad-fade-in-long {
+        will-change: opacity, transform;
+        animation-name: rad-fade-in-long-fallback;
+        animation-duration: 8s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-long-fallback {
+        0% {
+            opacity: 0;
+        }
+
+        75% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .fonts-loaded .rad-fade-in-long.rad-waiting {
+        animation-name: none;
+        opacity: 0;
+    }
+
+    .fonts-loaded .rad-fade-in-long.rad-animate {
+        animation-name: rad-fade-in-long;
+        animation-duration: 2s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-long {
+        0% {
+            opacity: 0;
+        }
+
+        20% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+     
+    .rad-fade-down {
+        will-change: opacity, transform;
+        animation-name: rad-fade-down-fallback;
+        animation-duration: 5s;
+        animation-fill-mode: both;
+        transform: translateY(-30px);
+    }
+
+    @keyframes rad-fade-down-fallback {
+        0% {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+
+        75% {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .fonts-loaded .rad-fade-down.rad-waiting {
+        animation-name: none;
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    .fonts-loaded .rad-fade-down.rad-animate {
+        animation-name: rad-fade-down;
+        animation-duration: 1.1s;
+    }
+
+    @keyframes rad-fade-down {
+        0% {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+     
+    .rad-scale-down {
+        will-change: opacity, transform;
+        animation-name: rad-scale-down-fallback;
+        animation-duration: 5s;
+        animation-fill-mode: both;
+        transform-origin: 50% 0;
+    }
+
+    @keyframes rad-scale-down-fallback {
+        0% {
+            opacity: 0;
+            transform: scaleY(0.95);
+        }
+
+        75% {
+            opacity: 0;
+            transform: scaleY(0.95);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+
+    .fonts-loaded .rad-scale-down.rad-waiting {
+        animation-name: none;
+        opacity: 0;
+        transform: scaleY(0.95);
+    }
+
+    .fonts-loaded .rad-scale-down.rad-animate {
+        animation-name: rad-scale-down;
+        animation-duration: 1.1s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes rad-scale-down {
+        0% {
+            opacity: 0;
+            transform: scaleY(0.95);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+</style>
+
+
+<link rel="stylesheet" href="https://Kamulegeya-Fahad.github.io/Kamulegeya-Fahad.github.io/css/main.css"/>
+
+<link rel="stylesheet" href="https://Kamulegeya-Fahad.github.io/Kamulegeya-Fahad.github.io/css/rad-icons.css"/>
+
+<link rel="stylesheet" href="https://Kamulegeya-Fahad.github.io/Kamulegeya-Fahad.github.io/css/custom.css"/>
+
+
     
 
 
+</head>
 
-<section class="hero" id="home">
-  <div class="hero_background-svg">
-    <svg viewBox="0 0 1437 1180">
-      <path fill="#f1f6f9" d="M0 0h1377l60 1010a120 120 0 01-120 120L0 1180z" data-name="Path 1350" />
-    </svg>
+<body>
+
+	<header class="header fixed-top rad-animation-group" id="header">
+  <div class="container rad-fade-in">
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
+      <a class="navbar-brand" href="https://Kamulegeya-Fahad.github.io/Kamulegeya-Fahad.github.io/">
+        <span>Fahad</span>
+        <span>Kamulegeya</span>
+        
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent, #header"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-lg-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://Kamulegeya-Fahad.github.io/Kamulegeya-Fahad.github.io/">HOME</a>
+          </li>
+          
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="#about"
+              >ABOUT</a
+            >
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
   </div>
-  <div class="hero_footer-svg">
-    <img src="images/hero/figure-svg.svg" alt="" />
+</header>
+
+
+	
+	
+<section class="rad-showcase rad-showcase--index rad-animation-group rad-fade-down">
+  <div class="rad-showcase__bg">
+    <img
+      class="lozad img-responsive"
+      src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+      data-src="https://Kamulegeya-Fahad.github.io/img/showcase/genetics-gf39c71a17_640.png"
+      data-srcset="https://Kamulegeya-Fahad.github.io/img/showcase/genetics-gf39c71a17_640.png 1x, https://Kamulegeya-Fahad.github.io/img/showcase/genetics-gf39c71a17_640.png 2x"
+      alt="Showcase keyboard and mouse image"
+    />
   </div>
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6">
-        <div class="hero_content">
-          <div class="hero_blob">
-            <svg viewBox="0 0 550 550">
-              <defs>
-                <linearGradient id="a" x1=".069" x2=".753" y1=".116" y2=".858" gradientUnits="objectBoundingBox">
-                  <stop offset="0" stop-color="#fff" />
-                  <stop offset="1" stop-color="#fff" stop-opacity=".012" />
-                </linearGradient>
-              </defs>
-              <g data-name="blob-shape (3)">
-                <path class="blob" fill="url(#a)"
-                  d="M455.4 151.1c43.1 36.7 73.4 92.8 60.8 136.3-12.7 43.5-68.1 74.4-111.3 119.4-43.1 45-74 104.1-109.8 109-35.9 5-76.7-44.2-111.8-89.2-35.2-45-64.7-85.8-70.8-132.6-6-46.8 11.6-99.6 46.7-136.3 35.2-36.6 88-57.2 142.4-58.8 54.5-1.7 110.6 15.6 153.8 52.2z" />
-              </g>
-            </svg>
-          </div>
-          <div class="mb-5">
-            <span class="top-title pre-line">Hello, I am Fahad</span>
-            <h1 id="a-lively-graduate-student">A lively Graduate Student</h1>
-<p>I love research, travelling and definitely food.
-          </div>
-          <a type="button" class="btn btn-lg btn-primary btn-zoom"
-            href="https://kamulegeya-fahad.github.io/contact">Contact me</a>
-        </div>
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-8 col-lg-7 col-xl-6">
+        <h1 class="display-1">
+          Hello, I am Fahad.
+          <br />
+          <span
+            >Graduate Researcher</span
+          >
+        </h1>
+        <p class="lead">
+          I am currently in <a target='_blank' href='https://fudenberg.team'>Fudenberg's group</a>  at the University of Southern Carlifornia. </p> I  am interested in genome organisation, travelling and definitely food.
+        </p>
+        <a
+          href="https://www.linkedin.com/in/kamulegeya-fahad-a872b514a"
+          class="btn btn-primary"
+        >
+          <i class="icon-mail-fill"></i>
+          Contact
+        </a>
       </div>
-      <div class="col-lg-6">
-        <div class="hero_figure">
-          <div class="figure-svg">
-            <img src="images/hero/figure-svg.svg" alt="figure-svg" />
-          </div>
-          <img src="https://kamulegeya-fahad.github.io/images/hero/dna-4828422_1280.jpg" alt="hero-image" style='
-                  -webkit-mask: url(https://kamulegeya-fahad.github.io/images/hero/hero-mask-svg.png);
-                  -webkit-mask-repeat: no-repeat;
-                  -webkit-mask-size: contain;
-                  -webkit-mask-position: center center;
-                ' />
+    </div>
+    <div class="row platform-links">
+      <div class="col-12">
+        
+        <a href="https://www.linkedin.com/in/kamulegeya-fahad-a872b514a" target="_blank"
+          ><i class="icon-linkedin-line"></i
+        ></a>
+        
+        <a href="https://github.com/Kamulegeya-Fahad" target="_blank"
+          ><i class="icon-github-line"></i
+        ></a>
+        
+      </div>
+    </div>
+  </div>
+  <div class="rad-showcase__bg rad-showcase__bg--mobile">
+    <img
+      class="lozad img-responsive"
+      src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+      data-src="https://Kamulegeya-Fahad.github.io/img/showcase/genetics-gf39c71a17_640.png"
+      alt="Showcase keyboard and mouse image mobile"
+    />
+  </div>
+</section>
 
-          
-        </div>
+
+	
+	
+<section class="section rad-animation-group pb-0" id="about">
+  <div class="container rad-fade-down">
+    <div class="row d-flex flex-column-reverse flex-md-row">
+      <div class="about__profile-picture col-12 col-md-6">
+        <img
+          class="lozad img-responsive image-left-overflow"
+          src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+          data-src="https://Kamulegeya-Fahad.github.io/Kamulegeya-Fahad.github.io/img/who-am-i/mypic.jpeg"
+          data-srcset="https://Kamulegeya-Fahad.github.io/Kamulegeya-Fahad.github.io/img/who-am-i/mypic.jpeg 1x, https://Kamulegeya-Fahad.github.io/Kamulegeya-Fahad.github.io/img/who-am-i/mypic.jpeg 2x"
+          alt="Profile Picture"
+        />
+      </div>
+      <div class="col-12 col-md-6 my-auto my-auto">
+        <h2>About Me</h2>
+        <p class="lead">
+          <p class="lead"> I am Graduate Student in Fudenberg`s Research Group in the Department of Quantitative and Computational Biology at the University of Southern Carlifornia. I got interested in biophysics towards the end of my Bachelors degree, which I followed during graduate studies in Italy. In this spirit, i spent a full year as a research technichian at the Institute of Molecular Biotechnology in Austria, modelling chromatin dynamics in the Goloborodko Lab.
+</p> <p class="lead"> I am interested in exploiting computational resources to decipher the link between chromatin dynamics, 3D genome organization and gene expression. </p>
+        </p>
+        <a
+          href="https://www.linkedin.com/in/kamulegeya-fahad-a872b514a"
+          target="_blank"
+          class="btn btn-primary"
+        >
+          <i class="icon-smile-fill"></i>
+          More about Me
+        </a>
       </div>
     </div>
   </div>
 </section>
 
 
-
-
-
-<section class="section about" id="about">
+	
+	
+<section class="section section--border-bottom rad-animation-group">
     <div class="container">
-        <div class="row text-center">
-            <div class="col-lg-6 offset-lg-3">
-                <div class="about_header mb-5">
-                    <span class="top-title"></span>
-                    <h2 id="currently">Currently</h2>
-<p>Am doing research in Fudenberg&rsquo;s Lab at the University of Southern Carlifornia.
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="about_content">
-                    <div class="about_content-thumb">
-                        <div class="about-svg">
-                            <img src="images/hero/figure-svg.svg" alt="figure-svg">
-                        </div>
-                        <div class="about_content-thumb-image">
-                            <img src="https://kamulegeya-fahad.github.io/images/about/about-img.jpg" alt="about-img"
-                                style='-webkit-mask: url(https://kamulegeya-fahad.github.io/images/about/about-mask-svg.svg); -webkit-mask-size: contain;'>
-                        </div>
-                    </div>
-                    <div class="about_content-inner">
-                        <div class="about_content-inner-blob">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                viewBox="0 0 600 600">
-                                <defs>
-                                    <linearGradient id="c" x1="0.929" y1="0.111" x2="0.263" y2="0.935"
-                                        gradientUnits="objectBoundingBox">
-                                        <stop offset="0" stop-color="#f1f6f9" />
-                                        <stop offset="1" stop-color="#f1f6f9" stop-opacity="0" />
-                                    </linearGradient>
-                                </defs>
-                                <g data-name="blob-shape (3)">
-                                    <path class="blob" fill="url(#c)"
-                                        d="M455.4 151.1c43.1 36.7 73.4 92.8 60.8 136.3-12.7 43.5-68.1 74.4-111.3 119.4-43.1 45-74 104.1-109.8 109-35.9 5-76.7-44.2-111.8-89.2-35.2-45-64.7-85.8-70.8-132.6-6-46.8 11.6-99.6 46.7-136.3 35.2-36.6 88-57.2 142.4-58.8 54.5-1.7 110.6 15.6 153.8 52.2z" />
-                                </g>
-                            </svg>
-                        </div>
-                        <div class="mb-4 text-light">
-                            <h3 id="i-am-interested-in-the-way-our-cells-are-able-to-organise-so-as-to-express-different-genes-at-given-times">I am interested in the way our cells are able to organise so as to express different genes at given times.</h3>
-<p>I am exploring how to exploit the available compuational tools and resources to analyse experimantal data with hope to answer interesting questions.
-                        </div>
-                        <div>
-                            <a class="btn btn-primary mr-3 btn-zoom"
-                                href="https://kamulegeya-fahad.github.io/contact">Collaboration</a>
-                            <a class="btn btn-outline-primary btn-zoom" href="https://kamulegeya-fahad.github.io/contact">
-                                Projects </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="section resume" id="resume">
-    <div class="resume__background"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="resume__heading">
-                    <div class="text-light">
-                        <span class="top-title pre-line">My Resume</span>
-                        <h2 id="my-expertises">My Expertises</h2>
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
-<p>Magna aliquyam erat, sed diam voluptua. At vero eos accusam justo.</p>
-
-                    </div>
-
-                    <div class="btn-group nav mt-5">
-                        <a href="#education" class="btn btn-primary active" data-toggle="tab">Education</a>
-                        <a href="#experience" class="btn btn-primary" data-toggle="tab">Experiences</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="tab-content ">
-                    <div class="resume__education tab-pane active" id="education">
-                        
-                        
-                        <div class="resume__education_item">
-                            <span class="pre-line text-primary"> 2008-2010 </span>
-                            <h4 id="master-in-arts">Master in Arts</h4>
-<p>Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                        </div>
-                        
-                        <div class="resume__education_item">
-                            <span class="pre-line text-primary"> 2008-2010 </span>
-                            <h4 id="master-in-arts">Master in Arts</h4>
-<p>Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                        </div>
-                        
-
-                    </div>
-
-                    <div class="resume__education tab-pane" id="experience">
-                        
-                        
-                        <div class="resume__education_item">
-                            <span class="pre-line text-primary"> 2016-Present </span>
-                            <h4 id="umbrella-co">Umbrella co.</h4>
-<p>Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                        </div>
-                        
-                        <div class="resume__education_item">
-                            <span class="pre-line text-primary"> 2010-2016 </span>
-                            <h4 id="aperture-science">Aperture Science</h4>
-<p>Lorem ipsum dolor sit amet conset sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                        </div>
-                        
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-<section class="section skill">
-    <div class="skill__background_shape">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 600">
-            <defs>
-                <linearGradient id="d" x1="0.929" y1="0.111" x2="0.263" y2="0.935" gradientUnits="objectBoundingBox">
-                    <stop offset="0" stop-color="#f1f6f9" />
-                    <stop offset="1" stop-color="#f1f6f9" stop-opacity="0" />
-                </linearGradient>
-            </defs>
-            <g data-name="blob-shape (3)">
-                <path class="blob" fill="url(#d)"
-                    d="M455.4 151.1c43.1 36.7 73.4 92.8 60.8 136.3-12.7 43.5-68.1 74.4-111.3 119.4-43.1 45-74 104.1-109.8 109-35.9 5-76.7-44.2-111.8-89.2-35.2-45-64.7-85.8-70.8-132.6-6-46.8 11.6-99.6 46.7-136.3 35.2-36.6 88-57.2 142.4-58.8 54.5-1.7 110.6 15.6 153.8 52.2z" />
-            </g>
-        </svg>
-    </div>
-    <div class="skill__background_pattern">
-        <img src="images/service/background-pattern.svg" alt="background-shape">
-    </div>
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="skill__thumb">
-                    <div class="skill__thumb_pattern">
-                        <img src="images/hero/figure-svg.svg" alt="figure-svg">
-                    </div>
-                    <div class="skill__thumb_image">
-                        <img src="https://kamulegeya-fahad.github.io/images/skill/skill_image.jpg" alt="skill-img" style='
-                                        -webkit-mask: url(https://kamulegeya-fahad.github.io/images/skill/skill-mask-svg.svg);
-                                        -webkit-mask-repeat: no-repeat;
-                                        -webkit-mask-size: contain;
-                                        -webkit-mask-position: center center;
-                                    '>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="skill__progress">
-                    <div class="skill__progress_heading mb-5">
-                        <span class="top-title pre-line">My Skills</span>
-                        <h2 id="why-hire-me-for-your-next-project">Why hire me for your next project?</h2>
-<p>My goal is to build a strong supportive professional network among all freelancers and startups in order to improve their performance.
-                    </div>
+        <div class="row rad-fade-down">
+            <div class="col-12">
+                <h2>Education</h2>
+                <div class="row pt-2 pt-md-4">
                     
-                    
-                    <div class="skill__progress_item">
-                        <span class="d-inline-block text-dark"> HTML </span>
-                        <div class="progress-value float-right"><span>69</span>%</div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:69%;" aria-valuemin="0"
-                                aria-valuemax="69"></div>
+                    <div class="col-12 col-sm-6 mb-4 mb-sm-0">
+                        <div class="education">
+                            <div class="education__date">2021-2026</div>
+                            <div class="education__title">University of Southern Carlifornia</div>
+                            <div class="education__degree">
+                                Doctor of Philosophy (PhD), Computational Biology and Bioinformatics
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="skill__progress_item">
-                        <span class="d-inline-block text-dark"> CSS </span>
-                        <div class="progress-value float-right"><span>60</span>%</div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:60%;" aria-valuemin="0"
-                                aria-valuemax="60"></div>
+                    <div class="col-12 col-sm-6 mb-4 mb-sm-0">
+                        <div class="education">
+                            <div class="education__date">2019-2020</div>
+                            <div class="education__title">International Center for Theoretical Physics</div>
+                            <div class="education__degree">
+                                Post Graduate Diploma, Quantitative Life Sciences
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="skill__progress_item">
-                        <span class="d-inline-block text-dark"> Javascript </span>
-                        <div class="progress-value float-right"><span>85</span>%</div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:85%;" aria-valuemin="0"
-                                aria-valuemax="85"></div>
+                    <div class="col-12 col-sm-6 mb-4 mb-sm-0">
+                        <div class="education">
+                            <div class="education__date">2015-2018</div>
+                            <div class="education__title">Makerere University</div>
+                            <div class="education__degree">
+                                Bachelor Science (BSc), Physics
+                            </div>
                         </div>
                     </div>
                     
@@ -359,134 +412,103 @@
 </section>
 
 
+	
+	
 
+	
+	
 
+	
+	
 
+	
+	
 
+	
+	
 
+	
 
- 
-
-
+	<footer class="footer">
+  <div class="container">
+    <div class="footer__left">
+      <div class="footer__copy">
+        
+      </div>
+    </div>
+    <div class="footer__links">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link" href="/">HOME</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="footer__right">
+      <a href="https://radity.com/"
+        ><img
+          src="https://Kamulegeya-Fahad.github.io/Kamulegeya-Fahad.github.io/"
+          srcset="https://Kamulegeya-Fahad.github.io/Kamulegeya-Fahad.github.io/ 1x, https://Kamulegeya-Fahad.github.io/Kamulegeya-Fahad.github.io/ 2x"
+          alt=""
+      /></a>
+    </div>
   </div>
-  <section class="footer" id="contact">
-	<div class="footer__background_shape">
-		<svg viewBox="0 0 1920 79">
-			<path d="M0 0h1920v79L0 0z" data-name="Path 1450" />
-		</svg>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="footer__cta">
-					<div class="shape-1">
-						<svg xmlns="http://www.w3.org/2000/svg" width="357" height="315.029" viewBox="0 0 357 315.029">
-							<path data-name="Path 1449"
-								d="M76.1-157.222C91.746-135.8 87.2-94.273 99.993-61.945c12.7 32.328 42.661 55.459 39.248 73.282-3.318 17.823-40.007 30.337-65.6 43.325-25.5 12.988-39.912 26.545-60.01 42.566-20.1 16.116-46.074 34.6-63.328 27.682-17.349-6.921-25.976-39.153-59.915-59.82s-93.1-29.768-105.325-51.478 22.373-56.028 43.609-93.949c21.331-37.921 29.2-79.35 53.563-96.793 24.459-17.444 65.414-10.9 103.9-6.921 38.396 3.982 74.326 5.404 89.965 26.829z"
-								transform="translate(217.489 188.626)" />
-						</svg>
-					</div>
-					<div class="shape-2">
-						<svg xmlns="http://www.w3.org/2000/svg" width="357" height="315.029" viewBox="0 0 357 315.029">
-							<path data-name="Path 1449"
-								d="M76.1-157.222C91.746-135.8 87.2-94.273 99.993-61.945c12.7 32.328 42.661 55.459 39.248 73.282-3.318 17.823-40.007 30.337-65.6 43.325-25.5 12.988-39.912 26.545-60.01 42.566-20.1 16.116-46.074 34.6-63.328 27.682-17.349-6.921-25.976-39.153-59.915-59.82s-93.1-29.768-105.325-51.478 22.373-56.028 43.609-93.949c21.331-37.921 29.2-79.35 53.563-96.793 24.459-17.444 65.414-10.9 103.9-6.921 38.396 3.982 74.326 5.404 89.965 26.829z"
-								transform="translate(217.489 188.626)" />
-						</svg>
-					</div>
-					<div class="text-light footer__cta_content">
-						<span>Contact me</span>
-						<h2 class="mb-0">Let’s Start a Project</h2>
-					</div>
-					<div class="footer__cta_action">
-						<a class="btn btn-light btn-zoom" href="https://kamulegeya-fahad.github.io/contact">Get in
-							touch</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row footer__widget">
-			<div class="col-lg-4">
-				<div class="footer__widget_logo mb-5">
-					<img src="https://kamulegeya-fahad.github.io/images/contact/widget-logo.png" alt="widget-logo">
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="text-light footer__widget_sitemap mb-5">
-					<h4 class="base-font">Sitemap</h4>
-					<ul class="unstyle-list small">
-						
-						
-						<li class="mb-2"><a class="text-light" href="https://kamulegeya-fahad.github.io/">Frequently Ask Question</a></li>
-						
-						<li class="mb-2"><a class="text-light" href="https://kamulegeya-fahad.github.io/">Privacy &amp; Policy</a></li>
-						
-						<li class="mb-2"><a class="text-light" href="https://kamulegeya-fahad.github.io/">Latest Article</a></li>
-						
-					</ul>
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="text-light footer__widget_address mb-5">
-					<h4 class="base-font">Address</h4>
-					
-					<ul class="fa-ul small">
-						<li class="mb-2"><a class="text-light" href="tel:&#43;%28448%29%20833%205272%20332"><span class="fa-li"><i
-										class="fa fa-phone"></i></span>&#43;(448) 833 5272 332</a></li>
-						<li class="mb-2"><a class="text-light" href="mailto:hello@example.com"><span class="fa-li"><i
-										class="fa fa-envelope"></i></span>hello@example.com</a></li>
-						<li class="mb-2">
-							<span class="fa-li"><i class="fa fa-map-marker"></i></span>23 Khan Niketon, Grand Street, NYK.</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="row footer__footer">
-			<div class="col-lg-6">
-				<div class="footer__footer_copy text-light">
-					<p>All right reserved copyright © Portio 2020</p>
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="footer__footer_social">
-					<ul class="unstyle-list">
-						
-						
-						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" href="https://www.facebook.com/"><i
-									class="fa fa-facebook-official"></i></a>
-						</li>
-						
-						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" href="https://www.linkedin.com/"><i
-									class="fa fa-linkedin-square"></i></a>
-						</li>
-						
-						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" href="https://www.pinterest.com/"><i
-									class="fa fa-pinterest-square"></i></a>
-						</li>
-						
-						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" href="https://twitter.com/"><i
-									class="fa fa-twitter-square"></i></a>
-						</li>
-						
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR%20GOOGLE%20MAP%20API&libraries=geometry"></script>
-<script src="https://kamulegeya-fahad.github.io/plugins/jQuery/jquery.min.js"></script>
-<script src="https://kamulegeya-fahad.github.io/plugins/bootstrap/bootstrap.min.js"></script>
-<script src="https://kamulegeya-fahad.github.io/plugins/slick/slick.min.js"></script>
-<script src="https://kamulegeya-fahad.github.io/plugins/waypoint/jquery.waypoints.min.js"></script>
-<script src="https://kamulegeya-fahad.github.io/plugins/magnafic-popup/jquery.magnific-popup.min.js"></script>
-<script src="https://kamulegeya-fahad.github.io/plugins/tweenmax/TweenMax.min.js"></script>
-<script src="https://kamulegeya-fahad.github.io/plugins/imagesloaded/imagesloaded.min.js"></script>
-<script src="https://kamulegeya-fahad.github.io/plugins/masonry/masonry.min.js"></script>
+</footer>
 
-<script src="https://kamulegeya-fahad.github.io/js/form-handler.min.js"></script>
-
-<script src="https://kamulegeya-fahad.github.io/js/script.min.js"></script>
+    <script src='https://Kamulegeya-Fahad.github.io/Kamulegeya-Fahad.github.io/js/rad-animations.js'></script>
+<script src='https://Kamulegeya-Fahad.github.io/Kamulegeya-Fahad.github.io/js/library/lozad.min.js'></script>
+<script>
+  window.addEventListener("load", function() {
+    var observer = window.lozad(".lozad", {
+      rootMargin: window.innerHeight / 2 + "px 0px",
+      threshold: 0.01
+    }); 
+    observer.observe();
+  });
+</script>
+<script src='https://Kamulegeya-Fahad.github.io/Kamulegeya-Fahad.github.io/js/library/jquery-3.3.1.slim.min.js'></script>
+<script src='https://Kamulegeya-Fahad.github.io/Kamulegeya-Fahad.github.io/js/library/bootstrap.min.js'></script>
+<script src='https://Kamulegeya-Fahad.github.io/Kamulegeya-Fahad.github.io/js/sticky-header.js'></script>
+<script src='https://Kamulegeya-Fahad.github.io/Kamulegeya-Fahad.github.io/js/library/smooth-scroll.polyfills.min.js'></script>
+<script src='https://Kamulegeya-Fahad.github.io/Kamulegeya-Fahad.github.io/js/library/fontfaceobserver.js'></script>
+<script>
+  (function(w) {
+    
+    if (w.document.documentElement.className.indexOf("fonts-loaded") > -1) {
+      return;
+    }
+    var fontA = new w.FontFaceObserver("Inter", {
+      weight: 300
+    });
+    var fontB = new w.FontFaceObserver("Inter", {
+      weight: 400
+    });
+    var fontC = new w.FontFaceObserver("Inter", {
+      weight: 500
+    });
+    var fontD = new w.FontFaceObserver("Inter", {
+      weight: 600
+    });
+    var fontE = new w.FontFaceObserver("Inter", {
+      weight: 700
+    });
+    var fontF = new w.FontFaceObserver("Inter", {
+      weight: 900
+    });
+    w.Promise.all([fontA.load(), fontC.load(), fontF.load()]).then(function() {
+      w.document.documentElement.className += " fonts-loaded";
+    });
+  })(this);
+</script>
+<script>
+  const scroll = new SmoothScroll('a[href*="#"]');
+    $('a.nav-link').on('click', () => {
+      const navbar = $('.navbar-collapse');
+      if (navbar && navbar.hasClass('show')) {
+        $('.navbar-toggler').click();
+      }
+    })
+</script>
 
 </body>
 
