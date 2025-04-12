@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +7,7 @@
     <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<meta name="description" content="Graduate Researcher exploring the connection between genome organisation, gene expression and disease through computational biology and machine learning."/>
 
 <script>
     (function (w, d, s, l, i) {
@@ -27,7 +27,7 @@
 </script>
 
 
-<title></title>
+<title>Fahad Kamulegeya | Graduate Researcher</title>
 <style>
      
     .rad-fade-in {
@@ -227,9 +227,6 @@
 <link rel="stylesheet" href="https://kamulegeya-fahad.github.io/css/custom.css"/>
 
 
-    
-
-
 </head>
 
 <body  style="background-color:#c2dcf5" >
@@ -343,9 +340,6 @@ Checkout my projects of interest on <a target='_blank' href='https://github.com/
   </div>
 </section>
 
-
-	
-	
 <section class="section rad-animation-group pb-0" id="about">
   <div class="container rad-fade-down">
     <div class="row d-flex flex-column-reverse flex-md-row">
@@ -356,12 +350,15 @@ Checkout my projects of interest on <a target='_blank' href='https://github.com/
           data-src="https://kamulegeya-fahad.github.io/img/who-am-i/mypic.jpeg"
           data-srcset="https://kamulegeya-fahad.github.io/img/who-am-i/mypic.jpeg 1x, https://kamulegeya-fahad.github.io/img/who-am-i/mypic.jpeg 2x"
           alt="Profile Picture"
+          loading="lazy"
+          width="800"
+          height="800"
         />
       </div>
       <div class="col-12 col-md-6 my-auto my-auto">
         <h2>About Me</h2>
         <p class="lead">
-<p>I developed a profound interest in biophysics during the later stages of my Bachelor's degree. This passion led me to secure a scholarship in Quantitative Life Sciences at ICTP, Italy. Along this journey, I embarked on two years of research adventures, initially at the Institute of Molecular Biotechnology in Austria, where I specialized in modeling chromatin dynamics within the Goloborodko Lab. Subsequently, I further honed my skills in <a target='_blank' href='https://fudenberg.team'>Fudenberg's lab</a> at the Department of Quantitative and Computational Biology, University of Southern California. In Fudenberg's lab, I employed Deep Learning techniques to further understand the complex 3D structure of the genome.These experiences significantly enhanced my abilities as a researcher.
+<p>I developed a profound interest in biophysics during the later stages of my Bachelor's degree. This passion led me to secure a scholarship in Quantitative Life Sciences at ICTP, Italy. Along this journey, I embarked on two years of research adventures, initially at the Institute of Molecular Biotechnology in Austria, where I specialized in modeling chromatin dynamics within the Goloborodko Lab. Subsequently, I further honed my skills in <a target='_blank' href='https://fudenberg.team' rel="noopener noreferrer">Fudenberg's lab</a> at the Department of Quantitative and Computational Biology, University of Southern California. In Fudenberg's lab, I employed Deep Learning techniques to further understand the complex 3D structure of the genome.These experiences significantly enhanced my abilities as a researcher.
 </p>
 <p>My current focus lies in harnessing computational resources to uncover the intricate connections between chromatin dynamics, 3D genome organization, and gene expression. I am confident that this endeavor will contribute significantly to the development of novel therapeutic approaches for a variety of diseases prevalent in today's world. </p>
         </p>
@@ -369,6 +366,7 @@ Checkout my projects of interest on <a target='_blank' href='https://github.com/
           href="https://www.linkedin.com/in/kamulegeya-fahad-a872b514a"
           target="_blank"
           class="btn btn-primary"
+          rel="noopener noreferrer"
         >
           <i class="icon-smile-fill"></i>
           More about Me
@@ -377,9 +375,6 @@ Checkout my projects of interest on <a target='_blank' href='https://github.com/
     </div>
   </div>
 </section>
-
-
-	
 	
 <section class="section section--border-bottom rad-animation-group" id="education">
     <div class="container">
@@ -423,24 +418,6 @@ Checkout my projects of interest on <a target='_blank' href='https://github.com/
         </div>
     </div>
 </section>
-
-
-	
-	
-
-	
-	
-
-	
-	
-
-	
-	
-
-	
-	
-
-	
 
 	<footer class="footer" style="background-image: linear-gradient(#c2dcf5,rgb(85, 74, 160))">
   <div class="container">
@@ -509,7 +486,12 @@ Checkout my projects of interest on <a target='_blank' href='https://github.com/
     var fontF = new w.FontFaceObserver("Inter", {
       weight: 900
     });
-    w.Promise.all([fontA.load(), fontC.load(), fontF.load()]).then(function() {
+    w.Promise.all([
+      // Load only the font weights you use in your content
+      fontA.load(), // 300 for light text
+      fontB.load(), // 400 for regular text
+      fontE.load()  // 700 for headings
+    ]).then(function() {
       w.document.documentElement.className += " fonts-loaded";
     });
   })(this);

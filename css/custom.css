@@ -1,1 +1,15 @@
 /* You can customize theme styles here */
+
+.navbar-collapse {
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
