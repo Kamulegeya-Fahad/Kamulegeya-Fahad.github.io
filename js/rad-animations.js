@@ -1,1 +1,36 @@
-let sectionIntersectOptions={rootMargin:"9999px 0px 0px 0px",threshold:.2};const onSectionIntersect=e=>{let t=0;animatedNodes.forEach(n=>{e.target.contains(n)&&(n.style.animationDelay=`${nodeDelayDelta*t+.1}s`,n.classList.add("rad-animate"),t++)})},onSectionIntersectChange=(e,t)=>{e.forEach(e=>{e.isIntersecting&&onSectionIntersect(e)})};let animationObserver=new IntersectionObserver(onSectionIntersectChange,sectionIntersectOptions);const animatedNodes=Array.from(document.querySelectorAll(".rad-fade-down, .rad-fade-in, .rad-fade-in-long, .rad-scale-down")),animatedSections=Array.from(document.querySelectorAll(".rad-animation-group")),nodeDelayDelta=.2,sectionDelayDelta=.2;animatedNodes.forEach((e,t)=>{e.classList.add("rad-waiting")}),animatedSections.forEach((e,t)=>{animationObserver.observe(e)});
+window.addEventListener("DOMContentLoaded", () => {
+  const animationGroups = document.querySelectorAll(".rad-animation-group");
+  const animationElements = document.querySelectorAll(
+    ".rad-fade-down, .rad-fade-in, .rad-fade-in-long"
+  );
+
+  // Intersection Observer for smooth reveal animations
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("rad-animate");
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: "50px",
+    }
+  );
+
+  // Observe all animation elements
+  animationElements.forEach((element) => {
+    element.classList.add("rad-waiting");
+    observer.observe(element);
+  });
+
+  // Add parallax effect to showcase background
+  const showcaseBg = document.querySelector(".rad-showcase__bg img");
+  if (showcaseBg) {
+    window.addEventListener("scroll", () => {
+      const scrolled = window.pageYOffset;
+      showcaseBg.style.transform = `translate3d(0, ${scrolled * 0.4}px, 0)`;
+    });
+  }
+});
