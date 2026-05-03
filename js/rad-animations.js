@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
   const animationGroups = document.querySelectorAll(".rad-animation-group");
   const animationElements = document.querySelectorAll(
-    ".rad-fade-down, .rad-fade-in, .rad-fade-in-long"
+    ".rad-fade-down, .rad-fade-in, .rad-fade-in-long",
   );
 
   // Intersection Observer for smooth reveal animations
@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
     {
       threshold: 0.1,
       rootMargin: "50px",
-    }
+    },
   );
 
   // Observe all animation elements
