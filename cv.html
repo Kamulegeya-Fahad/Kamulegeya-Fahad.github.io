@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Curriculum Vitae of Fahad Kamulegeya, Graduate Researcher in computational biology and genomics."
+    />
+    <title>CV | Fahad Kamulegeya</title>
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/rad-icons.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+
+    <style>
+      .cv-page {
+        min-height: 100vh;
+        padding: 7.5rem 1.25rem 3.5rem;
+      }
+
+      .cv-wrapper {
+        max-width: 960px;
+        margin: 0 auto;
+        background: #fbf7ef;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 28px;
+        box-shadow:
+          0 22px 56px rgba(0, 0, 0, 0.22),
+          0 6px 16px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+      }
+
+      .cv-header {
+        position: relative;
+        background:
+          linear-gradient(135deg, #15232c 0%, #1a2831 52%, #1d323b 100%);
+        color: #ffffff;
+        padding: 3rem 2.75rem 2.5rem;
+      }
+
+      .cv-header::after {
+        content: "";
+        position: absolute;
+        inset: auto 2.4rem 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          rgba(155, 215, 204, 0.38),
+          rgba(255, 255, 255, 0.06)
+        );
+      }
+
+      .cv-header h1 {
+        color: #f6fbfd;
+        margin-bottom: 0.5rem;
+        font-size: clamp(2.4rem, 5vw, 3.5rem);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+        text-wrap: balance;
+      }
+
+      .cv-header p {
+        margin-bottom: 0.6rem;
+        max-width: 680px;
+        color: rgba(242, 247, 250, 0.82);
+        text-wrap: pretty;
+      }
+
+      .cv-header strong {
+        color: #ffffff;
+      }
+
+      .cv-links a {
+        display: inline-flex;
+        margin-right: 0.75rem;
+        margin-top: 0.75rem;
+        padding: 0.4rem 0.75rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: transparent;
+        color: #e6f7f3;
+        text-decoration: none;
+      }
+
+      .cv-links a:hover {
+        background: rgba(255, 255, 255, 0.06);
+        color: #ffffff;
+      }
+
+      .cv-main {
+        padding: 2.6rem 2.75rem 2.9rem;
+        color: #23323b;
+      }
+
+      .cv-main a {
+        color: #21534a;
+      }
+
+      .cv-main a:hover {
+        color: #143831;
+      }
+
+      .cv-actions {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 2rem;
+      }
+
+      .cv-print-btn {
+        border: 1px solid rgba(33, 83, 74, 0.18);
+        background: transparent;
+        color: #173c35;
+        border-radius: 999px;
+        padding: 0.62rem 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .cv-print-btn:hover {
+        background: #173c35;
+        color: #ffffff;
+      }
+
+      .cv-section {
+        margin-bottom: 2.7rem;
+      }
+
+      .cv-section h2 {
+        color: #15232c;
+        margin-bottom: 1.15rem;
+        border-bottom: 1px solid rgba(21, 35, 44, 0.08);
+        padding-bottom: 0.7rem;
+        font-size: 1.28rem;
+        letter-spacing: -0.02em;
+        text-wrap: balance;
+      }
+
+      .cv-section p,
+      .cv-section li {
+        color: #4b5e67;
+        line-height: 1.85;
+      }
+
+      .cv-item {
+        margin-bottom: 1.35rem;
+        padding: 0 0 0 1.1rem;
+        border-left: 1px solid rgba(21, 35, 44, 0.12);
+        background: transparent;
+        box-shadow: none;
+      }
+
+      .cv-item h3 {
+        color: #17262f;
+        margin-bottom: 0.28rem;
+        font-size: 1.08rem;
+        line-height: 1.35;
+      }
+
+      .cv-meta {
+        color: #667985;
+        font-size: 0.92rem;
+        margin-bottom: 0.45rem;
+      }
+
+      .cv-main ul {
+        padding-left: 1.2rem;
+        margin-bottom: 0;
+      }
+
+      .cv-main li + li {
+        margin-top: 0.45rem;
+      }
+
+      .cv-footer {
+        font-size: 0.95rem;
+        color: #667985;
+        margin-top: 2.8rem;
+        padding-top: 1.4rem;
+        border-top: 1px solid rgba(21, 35, 44, 0.08);
+      }
+
+      @media (max-width: 768px) {
+        .cv-page {
+          padding: 6.5rem 1rem 2rem;
+        }
+
+        .cv-header,
+        .cv-main {
+          padding: 1.6rem;
+        }
+
+        .cv-header::after {
+          inset: auto 1.5rem 0;
+        }
+
+        .cv-header h1 {
+          font-size: 2.2rem;
+        }
+
+        .cv-section {
+          margin-bottom: 2.2rem;
+        }
+
+        .cv-item {
+          padding-left: 0.9rem;
+        }
+      }
+
+      @media print {
+        @page {
+          size: auto;
+          margin: 14mm;
+        }
+
+        body {
+          background: #ffffff;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+
+        .cv-page {
+          padding: 0;
+        }
+
+        header,
+        .cv-actions {
+          display: none !important;
+        }
+
+        .cv-wrapper {
+          max-width: none;
+          margin: 0;
+          border-radius: 0;
+          box-shadow: none;
+          overflow: visible;
+        }
+
+        .cv-main {
+          padding: 1.25rem 0 0;
+        }
+
+        .cv-section,
+        .cv-item,
+        .cv-links {
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="cv-page">
+    <header class="header fixed-top" id="header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+          <a class="navbar-brand" href="/">
+            <span>Fahad</span>
+            <span>Kamulegeya</span>
+          </a>
+          <div class="navbar-nav ml-lg-auto">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="#profile-heading">Profile</a>
+            <a class="nav-link" href="#education-heading">Education</a>
+            <a class="nav-link" href="/cv.html">CV</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="cv-wrapper" role="main">
+      <section class="cv-header">
+        <h1>Fahad Kamulegeya</h1>
+        <p>
+          <strong>Graduate Researcher</strong> | Computational Biology and
+          Machine Learning
+        </p>
+        <p>
+          I am fascinated by the connection between genome organisation, gene
+          expression, and disease. I currently explore machine learning
+          approaches to decipher links between genome organization and gene
+          expression at the Stowers Institute.
+        </p>
+        <div class="cv-links">
+          <a
+            href="https://www.linkedin.com/in/kamulegeya-fahad-a872b514a"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/Kamulegeya-Fahad"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://twitter.com/phad_king"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Twitter</a
+          >
+        </div>
+      </section>
+
+      <section class="cv-main">
+        <div class="cv-actions">
+          <button class="cv-print-btn" type="button" onclick="window.print()">
+            Print CV
+          </button>
+        </div>
+
+        <section class="cv-section" aria-labelledby="profile-heading">
+          <h2 id="profile-heading">Profile</h2>
+          <p>
+            Researcher with training in biophysics, quantitative life sciences,
+            and computational genomics. Experienced in modeling chromatin
+            dynamics and applying deep learning to understand 3D genome
+            structure and gene regulation.
+          </p>
+        </section>
+
+        <section class="cv-section" aria-labelledby="skills-heading">
+          <h2 id="skills-heading">Core Skills</h2>
+          <ul>
+            <li>Computational biology and quantitative modeling</li>
+            <li>Machine learning and deep learning for genomics</li>
+            <li>Chromatin dynamics and 3D genome organization analysis</li>
+            <li>Gene expression and genome regulation research</li>
+            <li>
+              Interdisciplinary collaboration across wet-lab and computational
+              teams
+            </li>
+          </ul>
+        </section>
+
+        <section class="cv-section" aria-labelledby="research-heading">
+          <h2 id="research-heading">Research Experience</h2>
+
+          <article class="cv-item">
+            <h3>Graduate Researcher, Stowers Institute for Medical Research</h3>
+            <div class="cv-meta">Current | Kansas City, USA</div>
+            <p>
+              Working in the Zeitlinger Lab and Ozel Lab to uncover connections
+              between chromatin dynamics, 3D genome organization, and gene
+              expression in the Drosophila optic lobe using computational
+              methods.
+            </p>
+          </article>
+
+          <article class="cv-item">
+            <h3>
+              Researcher, University of Southern California (Fudenberg Lab)
+            </h3>
+            <div class="cv-meta">Los Angeles, USA</div>
+            <p>
+              Applied deep learning techniques to investigate genome
+              architecture and improve understanding of the complex 3D structure
+              of the genome.
+            </p>
+          </article>
+
+          <article class="cv-item">
+            <h3>
+              Researcher, Institute of Molecular Biotechnology (Goloborodko Lab)
+            </h3>
+            <div class="cv-meta">Vienna, Austria</div>
+            <p>
+              Specialized in modeling chromatin dynamics and developed
+              computational approaches to study genome organization.
+            </p>
+          </article>
+        </section>
+
+        <section class="cv-section" aria-labelledby="education-heading">
+          <h2 id="education-heading">Education</h2>
+
+          <article class="cv-item">
+            <h3>Post Graduate Diploma, Quantitative Life Sciences</h3>
+            <div class="cv-meta">
+              International Center for Theoretical Physics | 2019-2020
+            </div>
+          </article>
+
+          <article class="cv-item">
+            <h3>Bachelor of Science (BSc), Physics</h3>
+            <div class="cv-meta">Makerere University | 2015-2018</div>
+          </article>
+        </section>
+
+        <section class="cv-section" aria-labelledby="interests-heading">
+          <h2 id="interests-heading">Research Interests</h2>
+          <p>
+            Chromatin dynamics, 3D genome organization, gene expression
+            regulation, computational biology, machine learning for genomics,
+            and quantitative modeling of biological systems.
+          </p>
+        </section>
+
+        <section class="cv-section" aria-labelledby="projects-heading">
+          <h2 id="projects-heading">Selected Project Themes</h2>
+          <ul>
+            <li>Modeling chromatin dynamics in research settings at IMBA</li>
+            <li>
+              Deep learning approaches for understanding genome 3D structure at
+              USC
+            </li>
+            <li>
+              Computational analysis of chromatin, gene expression, and optic
+              lobe development at Stowers
+            </li>
+          </ul>
+        </section>
+
+        <!-- <section class="cv-section" aria-labelledby="additional-heading">
+          <h2 id="additional-heading">Additional Information</h2>
+          <p>
+            Add LinkedIn-specific details here: exact position timelines,
+            publications, awards, certifications, mentoring, and conference
+            talks.
+          </p>
+          <p>
+            Source profile:
+            <a
+              href="https://www.linkedin.com/in/kamulegeya-fahad-a872b514a"
+              target="_blank"
+              rel="noopener noreferrer"
+              >linkedin.com/in/kamulegeya-fahad-a872b514a</a
+            >
+          </p>
+        </section> -->
+
+        <section class="cv-section" aria-labelledby="links-heading">
+          <h2 id="links-heading">Selected Links</h2>
+          <ul>
+            <li>
+              <a
+                href="https://www.stowers.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Stowers Institute</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.stowers.org/labs/zeitlinger-lab"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Zeitlinger Lab</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.stowers.org/labs/ozel-lab"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ozel Lab</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://fudenberg.team"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Fudenberg Lab</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.oeaw.ac.at/imba/research/anton-goloborodko"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Goloborodko Lab</a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <!-- <p class="cv-footer">
+          Draft generated from existing website content. LinkedIn blocks public
+          scraping in this environment, so add exact date ranges and
+          achievements from your profile to finalize this CV.
+        </p> -->
+      </section>
+    </main>
+  </body>
+</html>
