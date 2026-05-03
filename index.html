@@ -30,22 +30,17 @@
 
     <title>Fahad Kamulegeya | Graduate Researcher</title>
 
-    <!-- CSS Stylesheets (relative paths for better portability) -->
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/rad-icons.css" />
     <link rel="stylesheet" href="/css/custom.css" />
     <link rel="stylesheet" href="/css/animations-consolidated.css" />
   </head>
 
-  <body style="background-color: #c2dcf5">
-    <header
-      class="header fixed-top rad-animation-group"
-      id="header"
-      style="background-image: linear-gradient(rgb(85, 74, 160), #c2dcf5)"
-    >
+  <body>
+    <header class="header fixed-top rad-animation-group" id="header">
       <div class="container rad-fade-in">
         <nav class="navbar navbar-expand-lg navbar-light p-0">
-          <a class="navbar-brand" href="/">
+          <a class="navbar-brand" href="#home">
             <span>Fahad</span>
             <span>Kamulegeya</span>
           </a>
@@ -53,7 +48,7 @@
             class="navbar-toggler"
             type="button"
             data-toggle="collapse"
-            data-target="#navbarSupportedContent, #header"
+            data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -64,15 +59,16 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-lg-auto">
               <li class="nav-item">
-                <a class="nav-link" href="/">HOME</a>
+                <a data-scroll class="nav-link" href="#about">About</a>
               </li>
-
               <li class="nav-item">
-                <a data-scroll class="nav-link" href="#about">ABOUT</a>
+                <a data-scroll class="nav-link" href="#journey">Journey</a>
               </li>
-
               <li class="nav-item">
-                <a data-scroll class="nav-link" href="#education">ACADEMICS</a>
+                <a data-scroll class="nav-link" href="#education">Education</a>
+              </li>
+              <li class="nav-item">
+                <a data-scroll class="nav-link" href="#contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -80,305 +76,325 @@
       </div>
     </header>
 
-    <section
-      class="rad-showcase rad-showcase--index rad-animation-group rad-fade-down"
-    >
-      <div class="rad-showcase__bg">
-        <img
-          class="img-responsive"
-          src="/img/showcase/showcase-pic.png"
-          srcset="
-            /img/showcase/showcase-pic.png 1x,
-            /img/showcase/showcase-pic.png 2x
-          "
-          alt="DNA helix showcase image representing genome research"
-          width="595"
-          height="640"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-12 col-md-8 col-lg-7 col-xl-6">
-            <h1 class="display-1">
-              Hello, I am Fahad.
-              <br />
-              <span> A Graduate Researcher</span>
-            </h1>
-            <p class="lead">
-              I am fascinated by the connection between genome organisation,
-              gene expression and disease. I also like travelling and definitely
-              food. &#128523; Currently, at
-              <a
-                target="_blank"
-                href="https://www.stowers.org/"
-                rel="noopener noreferrer"
-                >Stowers Institute</a
-              >, I am exploring the use of machine learning tools to decipher
-              the link between genome organisation and gene expression. Checkout
-              my projects of interest on
-              <a
-                target="_blank"
-                href="https://github.com/Kamulegeya-Fahad"
-                rel="noopener noreferrer"
-                >github</a
-              >.
+    <main>
+      <section
+        class="rad-showcase rad-showcase--index rad-animation-group"
+        id="home"
+      >
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 col-lg-7 rad-fade-down">
+              <span class="eyebrow"
+                >Computational Biology / Machine Learning</span
+              >
+              <h1 class="display-1">
+                Exploring how genome organisation shapes gene expression.
+              </h1>
+              <p class="lead">
+                I am Fahad Kamulegeya, a graduate researcher working at the
+                intersection of chromatin dynamics, 3D genome architecture, and
+                disease biology. My current work at the
+                <a
+                  target="_blank"
+                  href="https://www.stowers.org/"
+                  rel="noopener noreferrer"
+                  >Stowers Institute</a
+                >
+                uses computational methods and machine learning to extract
+                signal from complex genomic systems.
+              </p>
+              <div class="hero-actions">
+                <a
+                  href="https://www.linkedin.com/in/kamulegeya-fahad-a872b514a"
+                  class="btn btn-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="icon-linkedin-fill"></i>
+                  Connect
+                </a>
+                <a class="btn btn-outline" href="/cv.html">View CV</a>
+              </div>
+              <div class="hero-highlights">
+                <div class="highlight-chip">
+                  <span class="highlight-chip__label">Focus</span>
+                  <span class="highlight-chip__value"
+                    >3D genome organisation</span
+                  >
+                </div>
+                <div class="highlight-chip">
+                  <span class="highlight-chip__label">Base</span>
+                  <span class="highlight-chip__value">Stowers Institute</span>
+                </div>
+              </div>
+              <div class="platform-links">
+                <a
+                  href="https://www.linkedin.com/in/kamulegeya-fahad-a872b514a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  ><i class="icon-linkedin-line"></i
+                ></a>
+                <a
+                  href="https://github.com/Kamulegeya-Fahad"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  ><i class="icon-github-line"></i
+                ></a>
+                <a
+                  href="https://twitter.com/phad_king"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitter"
+                  ><i class="icon-twitter-line"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-12 col-lg-5 rad-fade-in">
+              <div class="hero-visual-card">
+                <img
+                  class="img-responsive hero-visual-card__image"
+                  src="/img/who-am-i/mypic.jpeg"
+                  srcset="
+                    /img/who-am-i/mypic.jpeg 1x,
+                    /img/who-am-i/mypic.jpeg 2x
+                  "
+                  alt="Fahad Kamulegeya profile picture"
+                  loading="lazy"
+                  width="800"
+                  height="800"
+                />
+                <p class="hero-visual-card__caption">
+                  Research across chromatin dynamics, genome architecture, gene
+                  regulation, and computational discovery.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-panel rad-animation-group" id="about">
+        <div class="container rad-fade-down">
+          <div class="section-heading">
+            <span class="section-label">About</span>
+            <h2>Building quantitative intuition for biological systems.</h2>
+            <p>
+              My work combines modeling with practical machine learning, always
+              anchored in real biological questions.
             </p>
-            <a
-              href="https://www.linkedin.com/in/kamulegeya-fahad-a872b514a"
-              class="btn btn-primary"
-            >
-              <i class="icon-linkedin-fill"></i>
-              Connect
-            </a>
           </div>
-        </div>
-        <div class="row platform-links">
-          <div class="col-12">
-            <a
-              href="https://www.linkedin.com/in/kamulegeya-fahad-a872b514a"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              ><i class="icon-linkedin-line"></i
-            ></a>
-
-            <a
-              href="https://github.com/Kamulegeya-Fahad"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              ><i class="icon-github-line"></i
-            ></a>
-
-            <a
-              href="https://twitter.com/phad_king"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              ><i class="icon-twitter-line"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-      <div class="rad-showcase__bg rad-showcase__bg--mobile">
-        <img
-          class="img-responsive"
-          src="/img/showcase/showcase-pic.png"
-          alt="DNA helix showcase image representing genome research"
-          width="595"
-          height="640"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-    </section>
-
-    <section class="section rad-animation-group pb-0" id="about">
-      <div class="container rad-fade-down">
-        <div class="row d-flex flex-column-reverse flex-md-row">
-          <div class="about__profile-picture col-12 col-md-6">
-            <div class="position-relative">
-              <img
-                class="img-responsive rounded-lg shadow-lg"
-                src="/img/who-am-i/mypic.jpeg"
-                srcset="
-                  /img/who-am-i/mypic.jpeg 1x,
-                  /img/who-am-i/mypic.jpeg 2x
-                "
-                alt="Fahad Kamulegeya profile picture"
-                loading="lazy"
-                width="800"
-                height="800"
-              />
-              <div
-                class="position-absolute"
-                style="
-                  bottom: -20px;
-                  right: -20px;
-                  z-index: -1;
-                  width: 100%;
-                  height: 100%;
-                  background: var(--primary-color);
-                  border-radius: 1rem;
-                  opacity: 0.1;
-                "
-              ></div>
+          <div class="row align-items-stretch">
+            <div class="col-12 col-lg-7 mb-4 mb-lg-0">
+              <div class="content-card content-card--large">
+                <p>
+                  I am fascinated by the relationship between genome
+                  organisation, gene expression, and disease. Across training in
+                  physics, quantitative life sciences, and computational
+                  genomics, I have been drawn to problems where structure and
+                  dynamics interact across scales.
+                </p>
+                <p>
+                  That interest now drives my work on how chromatin state and 3D
+                  genome architecture influence transcriptional outcomes. I care
+                  about methods that are both technically sound and biologically
+                  interpretable.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="col-12 col-md-6 my-auto">
-            <h2 class="mb-4">About Me</h2>
-            <div class="row pt-2 pt-md-4">
-              <div class="col-12 mb-4">
-                <div class="education">
-                  <div class="education__date">Origins</div>
-                  <div class="education__title">Biophysics & QLS</div>
-                  <div class="education__degree">
-                    I developed a profound interest in biophysics during the
-                    later stages of my Bachelor's degree. This passion led me to
-                    secure a scholarship in Quantitative Life Sciences at ICTP,
-                    Italy.
-                  </div>
+            <div class="col-12 col-lg-5">
+              <div class="content-card content-card--stacked">
+                <div class="mini-stat">
+                  <span class="mini-stat__value">Physics</span>
+                  <span class="mini-stat__label">foundation</span>
                 </div>
-              </div>
-
-              <div class="col-12 mb-4">
-                <div class="education">
-                  <div class="education__date">IMBA, Austria</div>
-                  <div class="education__title">Chromatin Dynamics</div>
-                  <div class="education__degree">
-                    Along this journey, I embarked on two years of research
-                    adventures, initially at the Institute of Molecular
-                    Biotechnology in Austria, where I specialized in modeling
-                    chromatin dynamics within the
-                    <a
-                      target="_blank"
-                      href="https://www.oeaw.ac.at/imba/research/anton-goloborodko"
-                      rel="noopener noreferrer"
-                      >Goloborodko Lab.</a
-                    >
-                  </div>
+                <div class="mini-stat">
+                  <span class="mini-stat__value">ML</span>
+                  <span class="mini-stat__label"
+                    >for genome interpretation</span
+                  >
                 </div>
-              </div>
-
-              <div class="col-12 mb-4">
-                <div class="education">
-                  <div class="education__date">USC, USA</div>
-                  <div class="education__title">Deep Learning in Genomics</div>
-                  <div class="education__degree">
-                    Subsequently, I further honed my skills in
-                    <a
-                      target="_blank"
-                      href="https://fudenberg.team"
-                      rel="noopener noreferrer"
-                      >Fudenberg's lab</a
-                    >
-                    at the Department of Quantitative and Computational Biology,
-                    University of Southern California. In Fudenberg's lab, I
-                    employed Deep Learning techniques to further understand the
-                    complex 3D structure of the genome. These experiences
-                    significantly enhanced my abilities as a researcher.
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12">
-                <div class="education">
-                  <div class="education__date">Stowers Institute, USA</div>
-                  <div class="education__title">Current Focus</div>
-                  <div class="education__degree">
-                    My current focus in the
-                    <a
-                      target="_blank"
-                      href="https://www.stowers.org/labs/zeitlinger-lab"
-                      rel="noopener noreferrer"
-                      >Zeitliger Lab</a
-                    >
-                    and
-                    <a
-                      target="_blank"
-                      href="https://www.stowers.org/labs/ozel-lab"
-                      rel="noopener noreferrer"
-                      >Ozel Lab</a
-                    >
-                    lies in harnessing computational resources to uncover the
-                    intricate connections between chromatin dynamics, 3D genome
-                    organization, and gene expression in the drosophilla optic
-                    lobe.
-                  </div>
+                <div class="mini-stat">
+                  <span class="mini-stat__value">Research</span>
+                  <span class="mini-stat__label"
+                    >across Uganda, Italy, Austria, and the US</span
+                  >
                 </div>
               </div>
             </div>
-            <div class="mt-4">
+          </div>
+        </div>
+      </section>
+
+      <section class="section rad-animation-group" id="journey">
+        <div class="container rad-fade-down">
+          <div class="section-heading">
+            <span class="section-label">Journey</span>
+            <h2>
+              A research path shaped by computation and chromatin biology.
+            </h2>
+            <p>
+              Each step added a different layer: physical intuition,
+              quantitative methods, genome modeling, and deep learning.
+            </p>
+          </div>
+          <div class="timeline-grid">
+            <article class="timeline-card">
+              <span class="timeline-card__meta">Origins</span>
+              <h3>Biophysics and quantitative life sciences</h3>
+              <p>
+                During the later stages of my physics degree, I developed a
+                strong interest in biophysics. That led to a scholarship in
+                Quantitative Life Sciences at ICTP in Italy.
+              </p>
+            </article>
+            <article class="timeline-card">
+              <span class="timeline-card__meta">IMBA, Austria</span>
+              <h3>Chromatin dynamics modeling</h3>
+              <p>
+                At the Institute of Molecular Biotechnology, I worked in the
+                <a
+                  target="_blank"
+                  href="https://www.oeaw.ac.at/imba/research/anton-goloborodko"
+                  rel="noopener noreferrer"
+                  >Goloborodko Lab</a
+                >
+                on modeling chromatin dynamics and large-scale genome behavior.
+              </p>
+            </article>
+            <article class="timeline-card">
+              <span class="timeline-card__meta">USC, USA</span>
+              <h3>Deep learning for genomics</h3>
+              <p>
+                In
+                <a
+                  target="_blank"
+                  href="https://fudenberg.team"
+                  rel="noopener noreferrer"
+                  >Fudenberg's lab</a
+                >, I used deep learning approaches to probe how genome structure
+                relates to gene regulation and transcription.
+              </p>
+            </article>
+            <article class="timeline-card">
+              <span class="timeline-card__meta">Stowers Institute, USA</span>
+              <h3>Current focus</h3>
+              <p>
+                Currently in the
+                <a
+                  target="_blank"
+                  href="https://www.stowers.org/labs/zeitlinger-lab"
+                  rel="noopener noreferrer"
+                  >Zeitlinger Lab</a
+                >
+                and
+                <a
+                  target="_blank"
+                  href="https://www.stowers.org/labs/ozel-lab"
+                  rel="noopener noreferrer"
+                  >Ozel Lab</a
+                >
+                , I study chromatin dynamics, 3D genome organisation, and gene
+                expression in the Drosophila Visual System.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-panel rad-animation-group" id="education">
+        <div class="container rad-fade-down">
+          <div class="section-heading">
+            <span class="section-label">Education</span>
+            <h2>Academic training with a quantitative core.</h2>
+            <p>
+              The formal path behind the research work, from physics through
+              advanced quantitative biology.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 mb-4">
+              <div class="education-card">
+                <div class="education-card__year">2019 - 2020</div>
+                <h3>International Centre for Theoretical Physics</h3>
+                <p>Postgraduate Diploma, Quantitative Life Sciences</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+              <div class="education-card">
+                <div class="education-card__year">2015 - 2018</div>
+                <h3>Makerere University</h3>
+                <p>Bachelor of Science, Physics</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section rad-animation-group" id="contact">
+        <div class="container rad-fade-down">
+          <div class="contact-panel">
+            <div class="contact-panel__content">
+              <span class="section-label">Contact</span>
+              <h2>
+                Open to research conversations and thoughtful collaborations.
+              </h2>
+              <p>
+                If your work touches computational biology, machine learning, or
+                genome organisation, I am happy to connect.
+              </p>
+              <div class="contact-note">
+                Currently focused on computational genomics, chromatin dynamics,
+                and interpretable machine learning for biological questions.
+              </div>
+            </div>
+            <div class="contact-actions">
               <a
                 href="https://www.linkedin.com/in/kamulegeya-fahad-a872b514a"
-                target="_blank"
                 class="btn btn-primary"
+                target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="icon-smile-fill mr-2"></i>
-                More about Me
+                Reach Out
+              </a>
+              <a
+                href="https://github.com/Kamulegeya-Fahad"
+                class="btn btn-outline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
               </a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <section
-      class="section section--border-bottom rad-animation-group"
-      id="education"
-    >
-      <div class="container">
-        <div class="row rad-fade-down">
-          <div class="col-12">
-            <h2>Academics</h2>
-            <div class="row pt-2 pt-md-4">
-              <!-- <div class="col-12 col-sm-6 mb-4 mb-sm-0">
-                        <div class="education">
-                            <div class="education__date">2021-2026</div>
-                            <div class="education__title">University of Southern Carlifornia</div>
-                            <div class="education__degree">
-                                Doctor of Philosophy (PhD), Computational Biology and Bioinformatics
-                            </div>
-                        </div>
-                    </div>
-                     -->
-              <div class="col-12 col-sm-6 mb-4 mb-sm-0">
-                <div class="education">
-                  <div class="education__date">2019-2020</div>
-                  <div class="education__title">
-                    International Center for Theoretical Physics
-                  </div>
-                  <div class="education__degree">
-                    Post Graduate Diploma, Quantitative Life Sciences
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-sm-6 mb-4 mb-sm-0">
-                <div class="education">
-                  <div class="education__date">2015-2018</div>
-                  <div class="education__title">Makerere University</div>
-                  <div class="education__degree">
-                    Bachelor Science (BSc), Physics
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer
-      class="footer"
-      style="background-image: linear-gradient(#c2dcf5, rgb(85, 74, 160))"
-    >
+    <footer class="footer">
       <div class="container">
         <div class="footer__left">
-          <div class="footer__copy"></div>
+          <div class="footer__copy">
+            Fahad Kamulegeya / Graduate Researcher in computational biology
+          </div>
         </div>
         <div class="footer__links">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="/">HOME</a>
-              <a class="nav-link" href="#about">ABOUT</a>
+              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" href="#education">Education</a>
             </li>
           </ul>
-        </div>
-        <div class="footer__right">
-          <!-- Footer logo placeholder -->
         </div>
       </div>
     </footer>
 
-    <!-- Scripts (relative paths for better portability) -->
     <script src="/js/library/jquery-3.3.1.slim.min.js"></script>
     <script src="/js/library/bootstrap.min.js"></script>
-    <script src="/js/theme-manager.js"></script>
     <script src="/js/sticky-header.js"></script>
+    <script src="/js/rad-animations.js"></script>
     <script src="/js/library/smooth-scroll.polyfills.min.js"></script>
     <script src="/js/library/fontfaceobserver.js"></script>
     <script>
@@ -404,14 +420,11 @@
         var fontF = new w.FontFaceObserver("Inter", {
           weight: 900,
         });
-        w.Promise.all([
-          // Load only the font weights you use in your content
-          fontA.load(), // 300 for light text
-          fontB.load(), // 400 for regular text
-          fontE.load(), // 700 for headings
-        ]).then(function () {
-          w.document.documentElement.className += " fonts-loaded";
-        });
+        w.Promise.all([fontA.load(), fontB.load(), fontE.load()]).then(
+          function () {
+            w.document.documentElement.className += " fonts-loaded";
+          },
+        );
       })(this);
     </script>
     <script>
@@ -421,6 +434,34 @@
         if (navbar && navbar.hasClass("show")) {
           $(".navbar-toggler").click();
         }
+      });
+
+      const sectionLinks = Array.from(
+        document.querySelectorAll('header .navbar-nav .nav-link[href^="#"]'),
+      );
+      const sectionTargets = sectionLinks
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+
+      const syncActiveSection = () => {
+        const offset = window.scrollY + window.innerHeight * 0.28;
+        let activeId = "";
+
+        sectionTargets.forEach((section) => {
+          if (section.offsetTop <= offset) {
+            activeId = section.id;
+          }
+        });
+
+        sectionLinks.forEach((link) => {
+          const isActive = link.getAttribute("href") === `#${activeId}`;
+          link.classList.toggle("is-active", isActive);
+        });
+      };
+
+      syncActiveSection();
+      window.addEventListener("scroll", syncActiveSection, {
+        passive: true,
       });
     </script>
   </body>
