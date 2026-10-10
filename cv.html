@@ -16,8 +16,10 @@
 
     <style>
       .cv-page {
+        /* This page has no sticky-header script, so the header keeps its taller unscrolled padding. */
+        --nav-clearance: 8.5rem;
         min-height: 100vh;
-        padding: 7.5rem 1.25rem 3.5rem;
+        padding: 8.5rem 1.25rem 3.5rem;
       }
 
       .cv-wrapper {
@@ -182,9 +184,46 @@
         border-top: 1px solid rgba(21, 35, 44, 0.08);
       }
 
+      .cv-main [id] {
+        scroll-margin-top: var(--nav-clearance);
+      }
+
+      /* This page has no menu toggle, so below the lg breakpoint keep the links
+         on one compact row instead of main.css's full-width stacked column. */
+      @media (max-width: 991.98px) {
+        .cv-page {
+          --nav-clearance: 9.5rem;
+          padding-top: 9.5rem;
+        }
+
+        .cv-page .header .navbar-nav {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 0.1rem 1.1rem;
+          width: 100%;
+          margin-top: 0.5rem;
+        }
+
+        .cv-page .header .nav-link {
+          padding: 0.2rem 0;
+        }
+      }
+
+      /* Keep the four links on one row on very narrow phones (e.g. 280px fold cover screens). */
+      @media (max-width: 339.98px) {
+        .cv-page .header .navbar-nav {
+          column-gap: 0.7rem;
+        }
+
+        .cv-page .header .nav-link {
+          font-size: 0.8rem;
+        }
+      }
+
       @media (max-width: 768px) {
         .cv-page {
-          padding: 6.5rem 1rem 2rem;
+          padding: 9.5rem 1rem 2rem;
         }
 
         .cv-header,

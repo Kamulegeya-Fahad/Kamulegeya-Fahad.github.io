@@ -17,6 +17,8 @@
   --radius-lg: 24px;
   --radius-md: 18px;
   --transition: 220ms ease;
+  /* Viewport top to just below the fixed nav pill, used to offset anchor jumps. */
+  --nav-clearance: 6.75rem;
 }
 
 html {
@@ -118,14 +120,20 @@ a:hover {
   background: transparent;
 }
 
-.navbar-brand span:first-child {
+/* Scoped under .header so these outrank main.css's `.header .navbar-brand span`
+   rules, which otherwise set the surname in AutumnMoon at 32.9px over the first name. */
+.header .navbar-brand span:first-child {
   font-family: "AutumnMoon", serif;
   font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: normal;
   line-height: 0.9;
   color: var(--accent) !important;
 }
 
-.navbar-brand span:nth-child(2) {
+.header .navbar-brand span:nth-child(2) {
+  margin-top: 0.2rem;
+  font-family: inherit;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-size: 0.7rem;
@@ -207,16 +215,18 @@ a:hover {
   background: var(--accent);
 }
 
-.display-1 {
+/* The second selector outranks main.css's `.rad-showcase .container h1` font-size. */
+.display-1,
+.rad-showcase .container .display-1 {
   margin-top: 1.3rem;
   margin-bottom: 1.5rem;
-  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-size: clamp(3rem, 5vw, 4.25rem);
   font-weight: 800;
   line-height: 0.98;
   letter-spacing: -0.05em;
   color: var(--text);
   -webkit-text-fill-color: currentColor;
-  max-width: 10ch;
+  max-width: 13ch;
   text-wrap: balance;
 }
 
@@ -401,6 +411,8 @@ a:hover {
 
 .hero-visual-card__image {
   width: 100%;
+  /* Without this the img height attribute wins and aspect-ratio is ignored. */
+  height: auto;
   border-radius: calc(var(--radius-xl) - 10px);
   object-fit: cover;
   aspect-ratio: 4 / 4.6;
@@ -420,6 +432,12 @@ a:hover {
 .section {
   position: relative;
   padding: 6.25rem 0;
+}
+
+/* Land anchor jumps with the section content just below the fixed header;
+   the section's own top padding already supplies most of the gap. */
+.section[id] {
+  scroll-margin-top: calc(var(--nav-clearance) - 6.25rem);
 }
 
 .section-panel .container,
@@ -649,6 +667,10 @@ a:hover {
 }
 
 @media (max-width: 991.98px) {
+  :root {
+    --nav-clearance: 7.5rem;
+  }
+
   .navbar {
     border-radius: 28px;
   }
@@ -690,13 +712,18 @@ a:hover {
     border-radius: 24px;
   }
 
-  .display-1 {
-    font-size: 2.55rem;
+  .display-1,
+  .rad-showcase .container .display-1 {
+    font-size: clamp(2rem, 13vw, 2.55rem);
     max-width: 12ch;
   }
 
   .section {
     padding: 4.5rem 0;
+  }
+
+  .section[id] {
+    scroll-margin-top: calc(var(--nav-clearance) - 4.5rem);
   }
 
   .section-panel .container,
