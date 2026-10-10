@@ -162,7 +162,7 @@
                   "
                   alt="Fahad Kamulegeya profile picture"
                   loading="lazy"
-                  width="800"
+                  width="600"
                   height="800"
                 />
                 <p class="hero-visual-card__caption">
@@ -428,7 +428,11 @@
       })(this);
     </script>
     <script>
-      const scroll = new SmoothScroll('a[href*="#"]');
+      const scroll = new SmoothScroll('a[href*="#"]', {
+        // Reuse the CSS scroll-margin-top so clicked links and direct /#hash loads land alike.
+        offset: (anchor) =>
+          parseFloat(getComputedStyle(anchor).scrollMarginTop) || 0,
+      });
       $("a.nav-link").on("click", () => {
         const navbar = $(".navbar-collapse");
         if (navbar && navbar.hasClass("show")) {
